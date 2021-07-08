@@ -31,13 +31,13 @@ class Task extends Model
         return $this->project->path() . '/tasks/' . $this->id;
     }
 
-    public function complete()
+    public function complete(): void
     {
         $this->update(['completed' => true]);
         $this->recordActivity('completed_task');
     }
 
-    public function incomplete()
+    public function incomplete(): void
     {
         $this->update(['completed' => false]);
         $this->recordActivity('incompleted_task');

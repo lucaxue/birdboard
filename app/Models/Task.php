@@ -11,7 +11,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Task extends Model
 {
-    use HasFactory, RecordsActivity;
+    use HasFactory;
+    use RecordsActivity;
 
     protected $fillable = ['body', 'completed'];
 

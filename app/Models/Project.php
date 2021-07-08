@@ -10,7 +10,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Project extends Model
 {
-    use HasFactory, RecordsActivity;
+    use HasFactory;
+    use RecordsActivity;
 
     protected $fillable = [
         'title', 'description', 'notes'

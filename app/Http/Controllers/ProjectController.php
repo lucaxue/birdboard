@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
 use App\Models\Project;
@@ -15,7 +17,7 @@ class ProjectController extends Controller
     public function index()
     {
         $projects = auth()->user()->allProjects();
-        
+
         return view('projects.index', [
             'projects' => $projects
         ]);

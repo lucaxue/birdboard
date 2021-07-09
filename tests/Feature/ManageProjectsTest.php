@@ -47,7 +47,8 @@ class ManageProjectsTest extends TestCase
         $this->get('/projects/create')->assertStatus(200);
 
         $this->followingRedirects()
-            ->post('/projects', $attributes = Project::factory()->raw())->assertSee($attributes['title'])
+            ->post('/projects', $attributes = Project::factory()->raw())
+            ->assertSee($attributes['title'])
             ->assertSee($attributes['description'])
             ->assertSee($attributes['notes']);
     }

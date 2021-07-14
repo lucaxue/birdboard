@@ -25,8 +25,8 @@
         @include('layouts.navigation')
     </div>
 
-    <section class="max-w-7xl mx-auto sm-px:6 lg:px-8">
-        <div class="flex flex-col lg:flex-row w-full gap-3">
+    <section class="max-w-7xl mx-auto sm-px:6 lg:px-8" style="height: calc(100vh - 4rem);">
+        <div class="flex flex-col lg:flex-row w-full gap-3 h-full">
 
             <div class="w-full">
                 <!-- Page Heading -->

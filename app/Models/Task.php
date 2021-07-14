@@ -27,7 +27,7 @@ class Task extends Model
         return $this->belongsTo(Project::class);
     }
 
-    public function path()
+    public function path(): string
     {
         return "{$this->project->path()}/tasks/{$this->id}";
     }

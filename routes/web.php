@@ -18,23 +18,25 @@ use App\Http\Controllers\ProjectInvitationController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::view('/', 'welcome');
 
 Route::middleware('auth')->group(function () {
     Route::resource('projects', ProjectController::class);
 
-    Route::post('/projects/{project}/tasks', [
-        ProjectTaskController::class, 'store'
-    ]);
+    Route::post(
+        '/projects/{project}/tasks',
+        [ProjectTaskController::class, 'store']
+    );
 
-    Route::patch('/projects/{project}/tasks/{task}', [
-        ProjectTaskController::class, 'update'
-    ]);
+    Route::patch(
+        '/projects/{project}/tasks/{task}',
+        [ProjectTaskController::class, 'update']
+    );
 
-    Route::post('/projects/{project}/invitations', [ProjectInvitationController::class, 'store']);
+    Route::post(
+        '/projects/{project}/invitations',
+        [ProjectInvitationController::class, 'store']
+    );
 });
 
 require __DIR__ . '/auth.php';

@@ -13,7 +13,6 @@ class ProjectTasksTest extends TestCase
 {
     use RefreshDatabase;
 
-
     /** @test */
     public function guests_cannot_add_tasks_to_projects()
     {
@@ -22,6 +21,7 @@ class ProjectTasksTest extends TestCase
         $this->post($project->path() . '/tasks')
             ->assertRedirect(route('login'));
     }
+
     /** @test */
     public function guests_cannot_update_tasks()
     {
@@ -111,8 +111,6 @@ class ProjectTasksTest extends TestCase
 
         $this->assertDatabaseHas('tasks', $attributes);
     }
-
-
 
     /** @test */
     public function a_user_cannot_update_tasks_they_are_not_part_of()

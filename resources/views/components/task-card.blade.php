@@ -6,7 +6,7 @@
 
 	<x-card class="py-4 pr-6 flex items-center justify-between">
 		<input name="body"
-			class="focus:outline-none border-l-4 border-green-300 py-1 pl-3 {{ $task->completed ? 'text-gray-400' : '' }}"
+			class="focus:outline-none w-2/3 border-l-4 border-green-300 py-1 pl-3 {{ $task->completed ? 'text-gray-400' : '' }}"
 			value="{{ $task->body }}">
 		<div class="flex items-center gap-4">
 			<label for="completed" class="text-gray-400">Due Someday</label>
